@@ -9,26 +9,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Neutrals -->
+    <!-- Application Structure Plan: A single-page vertical scroll design with a fixed side navigation. This structure allows users to logically follow the project's narrative from problem to solution and execution, while also providing quick access to any specific section. The flow is designed to be intuitive: 1. What is the project? 2. Why is it needed? 3. How does it work? 4. What tech is used? 5. What's the benefit? 6. How do we build it? This is more effective than a static report as it guides the user through a strategic analysis. -->
+    <!-- Visualization & Content Choices: 1. Production Comparison (Report Info: Old vs. Current vs. Virtual Table) -> Goal: Compare -> Viz: Bar Chart -> Interaction: Tooltips on bars -> Justification: Clearly shows the time/cost advantage of the new system -> Library: Chart.js. 2. System Architecture (Report Info: Workflow) -> Goal: Organize -> Viz: HTML/CSS Diagram -> Interaction: Hover effects on stages -> Justification: A visual flow is easier to understand than text. 3. Cost/Benefit Analysis (Report Info: Cost optimization) -> Goal: Compare -> Viz: Doughnut Chart -> Interaction: Tooltips on segments -> Justification: Highlights the significant reduction in manual labor costs. -> Library: Chart.js. CONFIRMING NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Noto Sans KR', sans-serif;
             background-color: #FDFBF8;
             color: #3f3f46;
         }
-       .nav-link {
+        .nav-link {
             transition: all 0.3s ease;
             border-left: 3px solid transparent;
         }
-       .nav-link.active {
+        .nav-link.active {
             border-left-color: #2563eb;
             color: #2563eb;
             font-weight: 500;
             background-color: #F0F3F8;
         }
-       .content-section {
+        .content-section {
             scroll-margin-top: 6rem;
         }
-       .chart-container {
+        .chart-container {
             position: relative;
             width: 100%;
             max-width: 600px;
@@ -38,7 +42,7 @@
             max-height: 400px;
         }
         @media (min-width: 768px) {
-           .chart-container {
+            .chart-container {
                 height: 350px;
             }
         }
@@ -68,30 +72,22 @@
             <section id="section-1" class="content-section mb-16">
                 <h2 class="text-3xl font-bold mb-4 border-b pb-2">프로젝트 개요</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                        '버추얼 테이블' 프로젝트는 포커 방송의 진화 과정에서 발생한 중요한 시장의 빈틈을 공략합니다. 라이브 스트리밍의 즉시성과 과거 황금기 방송의 서사적 깊이를 결합하여, 비용 최적화된 새로운 제작 방식을 통해 시청자에게 최고의 경험을 제공하는 것을 목표로 합니다.
+                    <p class="text-lg leading-relaxed text-gray-700 mb-8">
+                        '버추얼 테이블' 프로젝트는 포커 방송의 잃어버린 '서사'를 현대적인 기술로 복원하여, 라이브 스트리밍 시대에 새로운 콘텐츠 경험을 제공하는 것을 목표로 합니다. 이 프로젝트의 탄생 배경은 포커 방송의 역사적 흐름과 현재 시장의 명확한 빈틈에서 찾을 수 있습니다.
                     </p>
                     
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-xl font-bold text-blue-700 mb-2">1.1 후반 제작의 황금기 (2003-2011): '포커 붐' 서사</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                2000년대 초반, ESPN의 WSOP, *하이 스테이크 포커* 등은 '홀 카드 카메라' 기술을 바탕으로 시청자에게 플레이어의 심리를 엿볼 기회를 제공했습니다. 이 시대의 방송은 수 시간에 걸친 녹화 영상을 42분짜리 드라마로 압축하는 철저한 후반 제작을 통해 완성되었습니다. 제작진은 가장 흥미로운 핸드와 극적인 순간들을 선별하여 플레이어를 스타로 만들고, 포커를 하나의 문화 현상으로 이끌었습니다. 이는 단순한 경기 중계가 아닌, 잘 짜인 서사 중심의 콘텐츠였습니다.
-                            </p>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">1.1. 후반 제작의 황금기 (2003-2011): '포커 붐' 서사</h3>
+                            <p class="text-gray-600 leading-relaxed">2003년 '머니메이커 효과'로 시작된 포커 붐 시대의 방송은 단순한 경기 중계를 넘어섰습니다. 제작진은 대회장 곳곳의 테이블에서 벌어지는 유명 선수들의 플레이나 극적인 승부를 촬영하고, 여기에 GFX(그래픽)를 입히는 후반 작업을 통해 한 편의 영화 같은 서사를 만들어냈습니다. 시청자들은 피처 테이블 너머의 광대한 토너먼트 세계를 경험하며 포커의 매력에 깊이 빠져들었습니다.</p>
                         </div>
-                        
                         <div>
-                            <h3 class="text-xl font-bold text-blue-700 mb-2">1.2 라이브 스트리밍으로의 전환: 서사를 대가로 얻은 즉시성</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                인터넷 기술의 발전은 포커 방송의 중심을 트위치, 유튜브와 같은 온라인 플랫폼으로 옮겼습니다. *허슬러 카지노 라이브*와 같은 현대의 스트리밍은 편집되지 않은 날것의 플레이를 단일 테이블에서 수 시간 동안 중계합니다. 이는 현장감을 제공하지만, 과거 방송이 가졌던 서사적 깊이와 다중 테이블의 드라마를 포착하는 능력을 상실하게 만들었습니다. 라이브 환경에서 여러 테이블의 GFX를 실시간으로 제작하는 것은 기존의 노동 집약적 방식으로는 불가능했기 때문입니다.
-                            </p>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">1.2. 라이브 스트리밍으로의 전환: 서사를 대가로 얻은 즉시성</h3>
+                            <p class="text-gray-600 leading-relaxed">라이브 스트리밍 기술이 발전하면서, 방송의 패러다임은 '잘 짜인 서사'에서 '날것의 즉시성'으로 전환되었습니다. GFX를 입히는 후반 작업은 라이브 송출에 걸림돌이 되었고, 제작 시간과 비용 문제로 인해 자연스럽게 생략되었습니다. 그 결과, 현재의 방송은 피처 테이블의 단조로운 플레이에만 의존하게 되었고, 과거의 풍부한 스토리텔링은 사라졌습니다.</p>
                         </div>
-
                         <div>
-                            <h3 class="text-xl font-bold text-blue-700 mb-2">1.3 시장의 빈틈 발견: 잘 짜인 라이브 액션에 대한 수요 (니치 마켓)</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                포커 방송의 진화는 역설적으로 '라이브의 즉시성'과 '편집된 서사의 재미'를 동시에 원하는 시청자층이라는 중요한 니치 마켓을 남겼습니다. 현재의 시청자들은 GTO(게임 이론 최적화)와 데이터 분석에 익숙하며, 단순히 액션을 보는 것을 넘어 그 이면의 전략적 깊이를 이해하고자 합니다. '버추얼 테이블'은 바로 이 시장을 공략합니다. AI 보조 제작 도구를 통해 라이브 환경에서도 여러 테이블의 흥미로운 순간들을 선별하고, 실시간 GFX와 함께 서사적으로 엮어내는 새로운 시청 경험을 제공함으로써 기술적 한계 때문에 포기해야만 했던 과거의 장점을 부활시키고자 합니다.
-                            </p>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">1.3. 시장의 빈틈 발견: 잘 짜인 라이브 액션에 대한 수요</h3>
+                            <p class="text-gray-600 leading-relaxed">바로 이 지점에서 '버추얼 테이블'은 중요한 시장의 빈틈(Niche Market)을 발견했습니다. 시청자들은 라이브의 즉시성을 원하면서도, 동시에 과거 방송처럼 깊이 있고 흥미로운 콘텐츠에 대한 갈증을 느끼고 있습니다. 이는 속도와 깊이를 모두 만족시키는 '잘 짜인 라이브 액션'에 대한 명백한 수요가 존재함을 의미합니다. 본 프로젝트는 이 니치 마켓을 공략하여, RFID와 같은 고비용 장비 없이 소수 인력으로 운영 가능한 비용 최적화 시스템을 통해 포커 방송의 새로운 표준을 제시하고자 합니다.</p>
                         </div>
                     </div>
                 </div>
@@ -260,13 +256,13 @@
                 labels: ['과거 방송', '현재 라이브', '버추얼 테이블'],
                 datasets: [{
                     label: '제작 시간 (단위: 시간)',
-                    data: [1, 2, 3],
+                    data: [24, 2, 4],
                     backgroundColor: ['#ef4444', '#f59e0b', '#22c55e'],
                     borderColor: ['#dc2626', '#d97706', '#16a34a'],
                     borderWidth: 1
                 }, {
                     label: '콘텐츠 깊이 (1-10)',
-                    data: [4, 3, 5],
+                    data: [9, 4, 8],
                     backgroundColor: ['rgba(239, 68, 68, 0.5)', 'rgba(245, 158, 11, 0.5)', 'rgba(34, 197, 94, 0.5)'],
                     borderColor: ['#dc2626', '#d97706', '#16a34a'],
                     borderWidth: 1
@@ -297,10 +293,10 @@
         new Chart(ctx2, {
             type: 'doughnut',
             data: {
-                labels:,
+                labels: ['RFID 시스템 구축 비용', '버추얼 테이블 개발 비용', '인건비 절감 효과 (연)'],
                 datasets: [{
                     label: '비용 비교',
-                    data: ,
+                    data: [100, 5, 40],
                     backgroundColor: [
                         '#ef4444',
                         '#3b82f6',
@@ -329,334 +325,4 @@
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>버추얼 테이블 프로젝트 분석</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #FDFBF8;
-            color: #3f3f46;
-        }
-       .nav-link {
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
-        }
-       .nav-link.active {
-            border-left-color: #2563eb;
-            color: #2563eb;
-            font-weight: 500;
-            background-color: #F0F3F8;
-        }
-       .content-section {
-            scroll-margin-top: 6rem;
-        }
-       .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-           .chart-container {
-                height: 350px;
-            }
-        }
-    </style>
-</head>
-<body class="scroll-smooth">
 
-    <div class="flex">
-        <aside class="sticky top-0 h-screen w-64 bg-white border-r border-gray-200 p-6 hidden lg:block">
-            <h1 class="text-2xl font-bold text-blue-600 mb-8">Virtual Table</h1>
-            <nav id="desktop-nav" class="flex flex-col space-y-2">
-                <a href="#section-1" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">프로젝트 개요</a>
-                <a href="#section-2" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">타당성 및 적합성</a>
-                <a href="#section-3" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">시스템 아키텍처</a>
-                <a href="#section-4" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">핵심 기술 및 방법</a>
-                <a href="#section-5" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">경쟁 우위 (Edge)</a>
-                <a href="#section-6" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">결론 및 제언</a>
-            </nav>
-        </aside>
-
-        <main class="w-full lg:flex-1 p-6 md:p-12">
-            <header class="lg:hidden mb-8">
-                 <h1 class="text-3xl font-bold text-blue-600">Virtual Table</h1>
-                 <p class="text-lg text-gray-500 mt-1">포커 방송 제작 혁신 프로젝트</p>
-            </header>
-            
-            <section id="section-1" class="content-section mb-16">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">프로젝트 개요</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                        '버추얼 테이블' 프로젝트는 포커 방송의 진화 과정에서 발생한 중요한 시장의 빈틈을 공략합니다. 라이브 스트리밍의 즉시성과 과거 황금기 방송의 서사적 깊이를 결합하여, 비용 최적화된 새로운 제작 방식을 통해 시청자에게 최고의 경험을 제공하는 것을 목표로 합니다.
-                    </p>
-                    
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-xl font-bold text-blue-700 mb-2">1.1 후반 제작의 황금기 (2003-2011): '포커 붐' 서사</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                2000년대 초반, ESPN의 WSOP, *하이 스테이크 포커* 등은 '홀 카드 카메라' 기술을 바탕으로 시청자에게 플레이어의 심리를 엿볼 기회를 제공했습니다. 이 시대의 방송은 수 시간에 걸친 녹화 영상을 42분짜리 드라마로 압축하는 철저한 후반 제작을 통해 완성되었습니다. 제작진은 가장 흥미로운 핸드와 극적인 순간들을 선별하여 플레이어를 스타로 만들고, 포커를 하나의 문화 현상으로 이끌었습니다. 이는 단순한 경기 중계가 아닌, 잘 짜인 서사 중심의 콘텐츠였습니다.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-bold text-blue-700 mb-2">1.2 라이브 스트리밍으로의 전환: 서사를 대가로 얻은 즉시성</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                인터넷 기술의 발전은 포커 방송의 중심을 트위치, 유튜브와 같은 온라인 플랫폼으로 옮겼습니다. *허슬러 카지노 라이브*와 같은 현대의 스트리밍은 편집되지 않은 날것의 플레이를 단일 테이블에서 수 시간 동안 중계합니다. 이는 현장감을 제공하지만, 과거 방송이 가졌던 서사적 깊이와 다중 테이블의 드라마를 포착하는 능력을 상실하게 만들었습니다. 라이브 환경에서 여러 테이블의 GFX를 실시간으로 제작하는 것은 기존의 노동 집약적 방식으로는 불가능했기 때문입니다.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-bold text-blue-700 mb-2">1.3 시장의 빈틈 발견: 잘 짜인 라이브 액션에 대한 수요 (니치 마켓)</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                포커 방송의 진화는 역설적으로 '라이브의 즉시성'과 '편집된 서사의 재미'를 동시에 원하는 시청자층이라는 중요한 니치 마켓을 남겼습니다. 현재의 시청자들은 GTO(게임 이론 최적화)와 데이터 분석에 익숙하며, 단순히 액션을 보는 것을 넘어 그 이면의 전략적 깊이를 이해하고자 합니다. '버추얼 테이블'은 바로 이 시장을 공략합니다. AI 보조 제작 도구를 통해 라이브 환경에서도 여러 테이블의 흥미로운 순간들을 선별하고, 실시간 GFX와 함께 서사적으로 엮어내는 새로운 시청 경험을 제공함으로써 기술적 한계 때문에 포기해야만 했던 과거의 장점을 부활시키고자 합니다.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="section-2" class="content-section mb-16">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">타당성 및 적합성</h2>
-                 <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg mb-6 leading-relaxed text-gray-700">라이브 스트리밍의 확산으로 시청자들은 더 빠르고 현장감 있는 콘텐츠를 원하지만, 동시에 깊이 있는 분석과 흥미로운 하이라이트에 대한 갈증도 여전합니다. 현재의 방송은 속도에 치중한 나머지 콘텐츠의 깊이를 놓치고 있으며, 이는 새로운 기회 시장이 존재함을 의미합니다. '버추얼 테이블'은 이러한 시장의 니즈를 정확히 공략하는 시의적절한 프로젝트입니다.</p>
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-3 text-blue-600">콘텐츠 제작 방식 비교</h3>
-                            <ul class="space-y-3 text-gray-600">
-                                <li class="flex items-start"><span class="font-bold text-red-500 mr-2">과거 방식:</span> 높은 품질, 긴 제작 시간, 고비용. 라이브 부적합.</li>
-                                <li class="flex items-start"><span class="font-bold text-yellow-500 mr-2">현재 방식:</span> 빠른 송출, 낮은 제작 비용. 콘텐츠 깊이 부족, 단조로움.</li>
-                                <li class="flex items-start"><span class="font-bold text-green-500 mr-2">'버추얼 테이블':</span> 빠른 송출과 고품질 콘텐츠의 결합. 비용 최적화 및 확장성 확보.</li>
-                            </ul>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="productionComparisonChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="section-3" class="content-section mb-16">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">시스템 아키텍처: AI 기반 제작 모델</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                <p class="text-lg mb-8 leading-relaxed text-gray-700">
-                    '버추얼 테이블'은 고비용의 완전 자동화 대신, 인간의 판단력과 AI의 효율성을 결합한 'Human-in-the-loop' 모델을 채택합니다. 현장 스팟터(Spotter)가 핵심 데이터를 빠르고 정확하게 입력할 수 있도록 돕는 AI 기반 도구를 제공하고, 이 데이터를 기반으로 GFX를 자동으로 생성하여 제작 시간을 최소화하는 것이 핵심입니다.
-                </p>
-                <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4 text-center">
-                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
-                        <div class="text-4xl mb-3">📱</div>
-                        <h3 class="text-lg font-semibold">1. 현장 데이터 입력</h3>
-                        <p class="text-sm text-gray-600 mt-1">스팟터가 전용 앱을 통해 카드, 액션, 칩 카운트 등 필수 정보를 버튼 클릭 방식으로 즉시 입력</p>
-                    </div>
-                    <div class="text-2xl text-gray-300">→</div>
-                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
-                        <div class="text-4xl mb-3">☁️</div>
-                        <h3 class="text-lg font-semibold">2. 데이터셋 전송</h3>
-                        <p class="text-sm text-gray-600 mt-1">입력된 데이터는 실시간으로 클라우드 데이터베이스에 핸드 단위로 구조화되어 저장</p>
-                    </div>
-                     <div class="text-2xl text-gray-300">→</div>
-                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
-                        <div class="text-4xl mb-3">⚙️</div>
-                        <h3 class="text-lg font-semibold">3. GFX 자동 생성</h3>
-                        <p class="text-sm text-gray-600 mt-1">후반 작업자는 데이터셋을 선택, GFX 엔진이 사전 정의된 템플릿에 맞춰 그래픽 영상을 자동 렌더링</p>
-                    </div>
-                     <div class="text-2xl text-gray-300">→</div>
-                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
-                        <div class="text-4xl mb-3">📺</div>
-                        <h3 class="text-lg font-semibold">4. 최종 방송 송출</h3>
-                        <p class="text-sm text-gray-600 mt-1">완성된 GFX 클립을 메인 방송 영상에 삽입하여 풍부한 콘텐츠를 시청자에게 제공</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <section id="section-4" class="content-section mb-16">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">핵심 기술 및 구현 방법</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg mb-8 leading-relaxed text-gray-700">이 시스템의 성공은 두 가지 핵심 도구의 개발에 달려 있습니다. 이 도구들은 인간의 작업을 대체하는 것이 아니라, 작업의 효율성을 극대화하여 소수 인력으로도 최대의 효과를 낼 수 있도록 설계됩니다.</p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="border border-gray-200 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-blue-600 mb-3">1. 스팟터용 데이터 입력 앱 (Spotter's Input App)</h3>
-                            <p class="mb-4 text-gray-600">현장에서 발생하는 복잡한 상황을 최소한의 동작으로 입력할 수 있도록 UI/UX를 최적화한 모바일/웹 앱입니다.</p>
-                            <ul class="space-y-2">
-                                <li><strong>✔️ 직관적 인터페이스:</strong> 카드(숫자, 무늬), 액션(벳, 콜, 레이즈) 등을 버튼으로 구성하여 터치 몇 번으로 입력 완료.</li>
-                                <li><strong>✔️ AI 기반 입력 보조 (선택):</strong> 카메라를 통해 카드를 인식하거나, 음성으로 액션을 입력하는 기능(향후 확장 가능).</li>
-                                <li><strong>✔️ 데이터 유효성 검사:</strong> 비정상적인 액션(예: 턴에 리버 카드 입력)을 방지하는 로직 내장.</li>
-                            </ul>
-                        </div>
-                        <div class="border border-gray-200 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-blue-600 mb-3">2. 자동 GFX 렌더링 엔진 (Automated GFX Engine)</h3>
-                            <p class="mb-4 text-gray-600">클라우드에 저장된 구조화된 데이터를 기반으로 방송용 GFX 영상을 자동으로 생성하는 소프트웨어입니다.</p>
-                            <ul class="space-y-2">
-                                <li><strong>✔️ 템플릿 기반 렌더링:</strong> 다양한 상황(프리플랍, 턴, 리버 등)에 맞는 GFX 템플릿을 미리 제작.</li>
-                                <li><strong>✔️ 데이터-그래픽 매핑:</strong> DB의 플레이어 이름, 카드, 팟 사이즈 등의 데이터를 템플릿의 해당 위치에 자동으로 매핑.</li>
-                                <li><strong>✔️ 일괄 처리 기능:</strong> 여러 핸드의 데이터셋을 선택하면 한 번에 모든 GFX 영상을 렌더링하여 후반 작업 시간 단축.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="section-5" class="content-section mb-16">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">경쟁 우위 (Edge) 및 기대효과</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg mb-6 leading-relaxed text-gray-700">'버추얼 테이블'은 지난 10년간 다른 프로덕션이 시도하지 못했던 영역에 비용 효율적인 해결책을 제시합니다. 이것은 단순한 기술 도입이 아닌, 제작 워크플로우의 혁신입니다.</p>
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-3 text-blue-600">차별화된 경쟁력</h3>
-                             <ul class="space-y-3 text-gray-600">
-                                <li class="flex items-start">
-                                    <span class="text-green-500 mr-2">⚡</span> <strong>속도와 깊이의 양립:</strong> 라이브의 속도를 유지하면서도, 다양한 테이블의 분석적인 콘텐츠를 제공.
-                                </li>
-                                <li class="flex items-start">
-                                     <span class="text-green-500 mr-2">💰</span> <strong>압도적인 비용 효율성:</strong> 고가의 RFID 시스템 구축 비용(수억 원) 없이 유사한 효과를 구현.
-                                </li>
-                                <li class="flex items-start">
-                                     <span class="text-green-500 mr-2"> scalable</span> <strong>유연한 확장성:</strong> 1개의 추가 테이블부터 시작하여, 스팟터 인력만 확보되면 수십 개 테이블로 확장이 용이.
-                                </li>
-                                 <li class="flex items-start">
-                                     <span class="text-green-500 mr-2">📈</span> <strong>콘텐츠 자산 축적:</strong> 모든 핸드 데이터가 DB에 축적되어, 향후 데이터 기반 콘텐츠(통계 분석, 특정 선수 하이라이트 등) 제작에 활용 가능.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="costBenefitChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="section-6" class="content-section">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">결론 및 제언</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg leading-relaxed text-gray-700">
-                        '버추얼 테이블' 프로젝트는 사라졌던 포커 방송의 재미를 되살리고, 현재의 라이브 환경에 최적화된 새로운 제작 표준을 제시할 수 있는 잠재력을 가지고 있습니다. 시장의 명확한 니즈, 비용 효율적인 기술 구현 가능성, 그리고 뚜렷한 경쟁 우위를 바탕으로, 이 프로젝트는 포커 콘텐츠 시장의 '게임 체인저'가 될 것입니다.
-                    </p>
-                    <p class="mt-4 text-lg leading-relaxed text-gray-700">
-                        이는 3명 이하의 소수 정예 팀으로도 충분히 실현 가능하며, 기술 개발과 현장 운영 노하우가 결합될 때 그 가치는 극대화될 것입니다. 최소 기능 제품(MVP) 개발을 통해 빠르게 시장성을 검증하고, 점진적으로 기능을 고도화하는 전략을 제안합니다.
-                    </p>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const sections = document.querySelectorAll('.content-section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href').substring(1) === entry.target.id) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        const ctx1 = document.getElementById('productionComparisonChart').getContext('2d');
-        new Chart(ctx1, {
-            type: 'bar',
-            data: {
-                labels: ['과거 방송', '현재 라이브', '버추얼 테이블'],
-                datasets: [{
-                    label: '제작 시간 (단위: 시간)',
-                    data: [1, 2, 3],
-                    backgroundColor: ['#ef4444', '#f59e0b', '#22c55e'],
-                    borderColor: ['#dc2626', '#d97706', '#16a34a'],
-                    borderWidth: 1
-                }, {
-                    label: '콘텐츠 깊이 (1-10)',
-                    data: [4, 3, 5],
-                    backgroundColor: ['rgba(239, 68, 68, 0.5)', 'rgba(245, 158, 11, 0.5)', 'rgba(34, 197, 94, 0.5)'],
-                    borderColor: ['#dc2626', '#d97706', '#16a34a'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: '콘텐츠 제작 방식 비교'
-                    },
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false
-                    }
-                }
-            }
-        });
-
-        const ctx2 = document.getElementById('costBenefitChart').getContext('2d');
-        new Chart(ctx2, {
-            type: 'doughnut',
-            data: {
-                labels:,
-                datasets: [{
-                    label: '비용 비교',
-                    data: ,
-                    backgroundColor: [
-                        '#ef4444',
-                        '#3b82f6',
-                        '#22c55e'
-                    ],
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: '비용 효율성 분석 (상대적 수치)'
-                    },
-                    legend: {
-                        position: 'top',
-                    },
-                }
-            }
-        });
-
-    });
-</script>
-
-</body>
-</html>

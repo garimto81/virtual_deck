@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Calm Neutrals -->
-    <!-- Application Structure Plan: A single-page vertical scroll design with a fixed side navigation. This structure allows users to logically follow the project's narrative from problem to solution and execution, while also providing quick access to any specific section. The flow is designed to be intuitive: 1. What is the project? 2. Why is it needed? 3. How does it work? 4. What tech is used? 5. What's the benefit? 6. How do we build it? This is more effective than a static report as it guides the user through a strategic analysis. -->
+    <!-- Application Structure Plan: A single-page vertical scroll design with a fixed side navigation. This structure allows users to logically follow the project's narrative from problem to solution and execution, while also providing quick access to any specific section. The flow is designed to be intuitive: 1. What is the project? 2. Why is it needed? 3. What's the benefit? 4. How does it work? 5. What tech is used? 6. How do we build it? This is more effective than a static report as it guides the user through a strategic analysis. -->
     <!-- Visualization & Content Choices: 1. Production Comparison (Report Info: Old vs. Current vs. Virtual Table) -> Goal: Compare -> Viz: Bar Chart -> Interaction: Tooltips on bars -> Justification: Clearly shows the time/cost advantage of the new system -> Library: Chart.js. 2. System Architecture (Report Info: Workflow) -> Goal: Organize -> Viz: HTML/CSS Diagram -> Interaction: Hover effects on stages -> Justification: A visual flow is easier to understand than text. 3. Cost/Benefit Analysis (Report Info: Cost optimization) -> Goal: Compare -> Viz: Doughnut Chart -> Interaction: Tooltips on segments -> Justification: Highlights the significant reduction in manual labor costs. -> Library: Chart.js. CONFIRMING NO SVG/Mermaid. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
@@ -56,17 +56,17 @@
             <nav id="desktop-nav" class="flex flex-col space-y-2">
                 <a href="#section-1" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">프로젝트 개요</a>
                 <a href="#section-2" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">타당성 및 적합성</a>
-                <a href="#section-3" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">시스템 아키텍처</a>
-                <a href="#section-4" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">핵심 기술 및 방법</a>
-                <a href="#section-5" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">경쟁 우위 (Edge)</a>
+                <a href="#section-3" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">경쟁 우위 (Edge)</a>
+                <a href="#section-4" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">시스템 아키텍처</a>
+                <a href="#section-5" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">핵심 기술 및 방법</a>
                 <a href="#section-6" class="nav-link py-2 px-4 rounded-r-md text-gray-600 hover:bg-gray-100">결론 및 제언</a>
             </nav>
         </aside>
 
         <main class="w-full lg:flex-1 p-6 md:p-12">
             <header class="lg:hidden mb-8">
-                 <h1 class="text-3xl font-bold text-blue-600">Virtual Table</h1>
-                 <p class="text-lg text-gray-500 mt-1">포커 방송 제작 혁신 프로젝트</p>
+                <h1 class="text-3xl font-bold text-blue-600">Virtual Table</h1>
+                <p class="text-lg text-gray-500 mt-1">포커 방송 제작 혁신 프로젝트</p>
             </header>
             
             <section id="section-1" class="content-section mb-16">
@@ -93,86 +93,89 @@
                 </div>
             </section>
 
-            <!-- =================================================================== -->
-            <!-- NEW 'One-Source Multi-Use' Section - Insert after Section 4         -->
-            <!-- =================================================================== -->
-            <section id="section-osmu" class="content-section mb-16">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">핵심 가치: 원소스 멀티 유즈 (OSMU) 전략</h2>
+            <section id="section-2" class="content-section mb-16">
+                <h2 class="text-3xl font-bold mb-4 border-b pb-2">타당성 및 적합성</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg leading-relaxed text-gray-700 mb-8">
-                        '버추얼 테이블'의 진정한 가치는 단순히 방송을 풍성하게 만드는 것을 넘어, 한 번 수집된 데이터를 다양한 형태의 콘텐츠로 무한히 확장하는 '원소스 멀티 유즈(OSMU)' 전략에 있습니다. 구조화된 데이터는 각 플랫폼의 특성에 최적화된, 높은 가치의 소셜 미디어 자산으로 재탄생합니다.
-                    </p>
-
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 md:p-8">
-                        <!-- Step 1: Source -->
-                        <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                            <div class="text-center">
-                                <div class="bg-blue-600 text-white w-24 h-24 rounded-full flex flex-col items-center justify-center shadow-lg mx-auto">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" /></svg>
-                                </div>
-                                <h3 class="font-bold text-lg mt-3 text-blue-700">1. 원천 소스</h3>
-                                <p class="text-sm text-gray-600">'버추얼 테이블' 데이터셋</p>
-                            </div>
-                            
-                            <!-- Arrow -->
-                            <div class="transform rotate-90 md:rotate-0 text-slate-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                            </div>
-
-                            <!-- Step 2: Processing -->
-                            <div class="flex-1 text-center md:text-left">
-                                <h3 class="font-bold text-lg text-gray-800">2. 가공 및 제작: 콘텐츠의 재구성</h3>
-                                <p class="text-gray-600 mt-1">정형화된 데이터(플레이어, 카드, 액션, 시간)는 GFX 자동화 시스템을 통해 즉시 시각화됩니다. 이 구조 덕분에 특정 선수나 하이라이트 핸드만 빠르게 추출하여 각 플랫폼에 맞는 포맷(세로형, 1분 미만 등)으로 재가공하는 것이 매우 용이합니다.</p>
-                            </div>
-                        </div>
-
-                        <!-- Divider Arrow -->
-                        <div class="flex justify-center items-center my-6 md:my-8">
-                            <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                        </div>
-
-                        <!-- Step 3: Multi-Use Outputs -->
+                    <p class="text-lg mb-6 leading-relaxed text-gray-700">라이브 스트리밍의 확산으로 시청자들은 더 빠르고 현장감 있는 콘텐츠를 원하지만, 동시에 깊이 있는 분석과 흥미로운 하이라이트에 대한 갈증도 여전합니다. 현재의 방송은 속도에 치중한 나머지 콘텐츠의 깊이를 놓치고 있으며, 이는 새로운 기회 시장이 존재함을 의미합니다. '버추얼 테이블'은 이러한 시장의 니즈를 정확히 공략하는 시의적절한 프로젝트입니다.</p>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <h3 class="text-center font-bold text-lg text-gray-800 mb-6">3. 콘텐츠 확장: 플랫폼별 최적화</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <!-- Broadcast -->
-                                <div class="bg-white p-4 rounded-lg shadow-sm border">
-                                    <div class="flex items-center space-x-4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-800">방송용 GFX 클립</h4>
-                                            <p class="text-sm text-gray-500">메인 스트림을 풍성하게 만드는 핵심 플레이</p>
-                                        </div>
+                            <h3 class="text-xl font-semibold mb-3 text-blue-600">콘텐츠 제작 방식 비교</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start"><span class="font-bold text-red-500 mr-2">과거 방식:</span> 높은 품질, 긴 제작 시간, 고비용. 라이브 부적합.</li>
+                                <li class="flex items-start"><span class="font-bold text-yellow-500 mr-2">현재 방식:</span> 빠른 송출, 낮은 제작 비용. 콘텐츠 깊이 부족, 단조로움.</li>
+                                <li class="flex items-start"><span class="font-bold text-green-500 mr-2">'버추얼 테이블':</span> 빠른 송출과 고품질 콘텐츠의 결합. 비용 최적화 및 확장성 확보.</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="productionComparisonChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="section-3" class="content-section mb-16">
+                <h2 class="text-3xl font-bold mb-4 border-b pb-2">경쟁 우위 (Edge)</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                    <h3 class="text-2xl font-semibold text-center mb-4">전략: 원소스 멀티 유즈 (OSMU)</h3>
+                    <p class="text-lg leading-relaxed text-gray-700 mb-10 text-center max-w-3xl mx-auto">
+                        '버추얼 테이블'의 핵심 경쟁력은 단순히 방송을 풍성하게 만드는 것을 넘어, 한 번의 데이터 수집으로 무한한 콘텐츠 확장이 가능하다는 점에 있습니다. 모든 빅 핸드와 주요 플레이는 그 자체로 완결된 '스토리'를 가진 데이터 자산이 되어, 각 미디어 플랫폼의 특성에 최적화된 형태로 재가공됩니다.
+                    </p>
+                    <div class="w-full max-w-5xl mx-auto">
+                        <div class="flex flex-col items-center">
+                            <div class="bg-blue-600 text-white rounded-full w-24 h-24 flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7M4 7D2 7 2 5c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v2c0 0-2 0-2 0M4 7h16" /></svg>
+                            </div>
+                            <h3 class="mt-4 text-xl font-bold text-gray-800">1. '버추얼 테이블' 데이터 수집</h3>
+                            <p class="text-gray-600">모든 핸드 정보, 액션, 승패 결과 기록</p>
+                        </div>
+                        <div class="h-16 flex justify-center">
+                            <div class="w-px bg-gray-300"></div>
+                            <svg class="w-6 h-6 text-gray-400 -ml-3 mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="relative bg-gray-800 text-white rounded-xl p-6 w-80 text-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-2 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                                <h3 class="text-xl font-bold">2. 데이터 기반 GFX 제작</h3>
+                                <p class="text-sm text-gray-300">구조화된 데이터를 기반으로<br>작업자가 신속하게 'GFX 클립' 수작업 제작</p>
+                            </div>
+                        </div>
+                        <div class="h-16 flex justify-center">
+                            <div class="w-px bg-gray-300"></div>
+                            <svg class="w-6 h-6 text-gray-400 -ml-3 mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-gray-800">3. 콘텐츠 배포 및 활용</h3>
+                            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="bg-slate-50 border border-slate-200 p-6 rounded-lg">
+                                    <h4 class="font-bold text-lg text-blue-700 mb-4">A. 메인 방송 활용</h4>
+                                    <div class="flex flex-col items-center justify-center h-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>
+                                        <p class="mt-4 text-gray-600">라이브 방송 중 삽입하여<br>피처 테이블 외의 흥미로운 순간 제공,<br>시청자 몰입도 극대화</p>
                                     </div>
                                 </div>
-                                <!-- Social Media Group -->
-                                <div class="bg-white p-4 rounded-lg shadow-sm border lg:col-span-2">
-                                    <h4 class="font-semibold text-gray-800 mb-3 text-center md:text-left">소셜 미디어 확산 (숏폼 콘텐츠)</h4>
-                                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-                                        <!-- Youtube -->
-                                        <div class="text-center p-2 rounded-md hover:bg-slate-100 transition-colors">
-                                            <svg class="w-10 h-10 mx-auto" fill="#FF0000" viewBox="0 0 24 24"><path d="M12.04,4.82c-0.8,0-1.5,0.02-2.19,0.05c-2.3,0.11-4.22,2.03-4.33,4.33c-0.03,0.69-0.05,1.38-0.05,2.19 c0,0.8,0.02,1.5,0.05,2.19c0.11,2.3,2.03,4.22,4.33,4.33c0.69,0.03,1.38,0.05,2.19,0.05c0.8,0,1.5-0.02,2.19-0.05 c2.3-0.11,4.22-2.03,4.33-4.33c0.03-0.69,0.05-1.38,0.05-2.19c0-0.8-0.02-1.5-0.05-2.19C20.58,6.9,18.66,4.98,16.36,4.87 C15.67,4.84,14.98,4.82,12.04,4.82z M9.93,14.61V8.75l5.22,2.93L9.93,14.61z"/></svg>
-                                            <p class="text-xs font-medium mt-1">유튜브 쇼츠</p>
+                                <div class="bg-slate-50 border border-slate-200 p-6 rounded-lg">
+                                    <h4 class="font-bold text-lg text-red-600 mb-4">B. 소셜 미디어 최적화</h4>
+                                    <p class="text-gray-600 mb-6 text-sm">극적인 승부, 블러프, 배드빗 등 짧고 강렬한 클립은 소셜 미디어 바이럴에 가장 이상적인 소재입니다.</p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                        <div class="flex flex-col items-center space-y-2 p-2 rounded-md hover:bg-gray-200 transition-colors">
+                                            <svg class="w-10 h-10 text-[#FF0000]" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.267,4,12,4,12,4S5.733,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.733,2,12,2,12s0,4.267,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.733,20,12,20,12,20s6.267,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.267,22,12,22,12S22,7.733,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
+                                            <span class="text-xs font-semibold">유튜브 쇼츠</span>
                                         </div>
-                                        <!-- Instagram -->
-                                        <div class="text-center p-2 rounded-md hover:bg-slate-100 transition-colors">
-                                            <svg class="w-10 h-10 mx-auto" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor"><defs><radialGradient id="g" r="115%" cx="30%" cy="107%"><stop stop-color="#fdf497" offset="0"/><stop stop-color="#fdf497" offset="0.05"/><stop stop-color="#fd5949" offset="0.45"/><stop stop-color="#d6249f" offset="0.6"/><stop stop-color="#285AEB" offset="0.9"/></radialGradient></defs><path d="M12 16a4 4 0 100-8 4 4 0 000 8z"/><path d="M3 16V8a5 5 0 015-5h8a5 5 0 015 5v8a5 5 0 01-5 5H8a5 5 0 01-5-5z"/><path d="M17.5 6.5a.5.5 0 100-1 .5.5 0 000 1z" stroke="url(#g)"/></svg>
-                                            <p class="text-xs font-medium mt-1">인스타그램</p>
+                                        <div class="flex flex-col items-center space-y-2 p-2 rounded-md hover:bg-gray-200 transition-colors">
+                                            <svg class="w-10 h-10 text-[#E1306C]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/></svg>
+                                            <span class="text-xs font-semibold">인스타그램</span>
                                         </div>
-                                        <!-- X -->
-                                        <div class="text-center p-2 rounded-md hover:bg-slate-100 transition-colors">
-                                            <svg class="w-10 h-10 mx-auto" fill="#000000" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                                            <p class="text-xs font-medium mt-1">X</p>
+                                        <div class="flex flex-col items-center space-y-2 p-2 rounded-md hover:bg-gray-200 transition-colors">
+                                            <svg class="w-10 h-10 text-[#000000]" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                            <span class="text-xs font-semibold">X</span>
                                         </div>
-                                        <!-- TikTok -->
-                                        <div class="text-center p-2 rounded-md hover:bg-slate-100 transition-colors">
-                                            <svg class="w-10 h-10 mx-auto" fill="#000000" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.1.03-4.15-.49-5.96-1.68-1.19-.77-2.16-1.85-2.86-3.04-1.02-1.72-1.39-3.69-1.39-5.65 0-2.98 1.15-5.75 3.14-7.82 1.94-2.02 4.6-3.14 7.37-3.14.02 1.54-.01 3.08.01 4.61-.98.01-1.95.01-2.93.01-.05 2.05.01 4.1-.03 6.14-.02.66-.23 1.31-.62 1.88-1.04 1.5-2.98 2.15-4.83 1.53-.78-.26-1.47-.73-2.02-1.33-.59-.64-.93-1.44-.94-2.28-.02-1.25.02-2.5.01-3.75.01-.98.39-1.93 1.07-2.67.65-.71 1.46-1.2 2.39-1.48 1.58-.46 3.23-.42 4.79.12.01-1.55.02-3.1.01-4.64z"/></svg>
-                                            <p class="text-xs font-medium mt-1">틱톡</p>
+                                        <div class="flex flex-col items-center space-y-2 p-2 rounded-md hover:bg-gray-200 transition-colors">
+                                            <svg class="w-10 h-10 text-[#010101]" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91.02.52.01 1.04.04 1.56.08.51.04 1.02.1 1.53.18 1.09.18 2.18.53 3.14 1.08.5.28.98.6 1.43.98.43.38.83.8 1.2 1.26.38.48.72.98 1.02 1.51.29.52.54 1.06.74 1.61.21.57.38 1.15.52 1.75.13.6.23 1.2.3 1.81.08.66. १२ 1.32.14 1.99.02.67.03 1.34.03 2.01 0 .67-.01 1.34-.03 2.01-.02.67-.06 1.33-.14 1.99-.07.61-.16 1.22-.3 1.81-.14.6-.32 1.19-.52 1.75-.2.55-.45 1.09-.74 1.61-.3.53-.64 1.03-1.02 1.51-.37.46-.77.88-1.2 1.26-.45.38-.93.7-1.43.98-1.94 1.08-4.28 1.57-6.67 1.57-1.32 0-2.63-.01-3.94-.03-.53-.01-1.06-.04-1.58-.08-.52-.04-1.03-.1-1.55-.18-1.09-.18-2.18-.53-3.14-1.08-.5-.28-.98-.6-1.43-.98-.43-.38-.83-.8-1.2-1.26-.38-.48-.72-.98-1.02-1.51-.29-.52-.54-1.06-.74-1.61-.21-.57-.38-1.15-.52-1.75-.13-.6-.23-1.2-.3-1.81-.08-.66-.12-1.32-.14-1.99-.02-.67-.03-1.34-.03-2.01 0-.67.01-1.34.03-2.01.02-.67.06-1.33.14-1.99.07-.61.16-1.22.3-1.81.14-.6.32-1.19.52-1.75.2-.55.45-1.09.74-1.61.3-.53.64-1.03-1.02-1.51.37-.46.77-.88 1.2-1.26.45-.38.93-.7 1.43-.98 1.94-1.08 4.28-1.57 6.67-1.57zM8.99 15.66c.01-1.6.01-3.2.01-4.8 0-.25-.01-.5-.03-.74.01-.01.01-.01.02-.02.04-.26.12-.51.23-.75.19-.44.48-.82.86-1.12.39-.31.84-.54 1.33-.69.49-.15 1-.22 1.51-.23.51-.01 1.02-.01 1.53.01.25.01.5.03.74.05.01 0 .02.01.03.01.26.04.51.12.75.23.44.19.82.48 1.12.86.31.39.54.84.69 1.33.15.49.22 1 .23 1.51.01.51.01 1.02-.01 1.53-.01.25-.03.5-.05.74 0 .01-.01.02-.01.03-.04.26-.12.51-.23.75-.19.44-.48.82-.86-1.12.39-.31-.84-.54-1.33-.69-.49-.15-1-.22-1.51-.23-.51-.01-1.02-.01-1.53-.01-.25-.01-.5-.03-.74-.05-.01 0-.02-.01-.03-.01-.26-.04-.51-.12-.75-.23-.44-.19-.82-.48-1.12-.86-.3-.39-.53-.84-.68-1.33z" /></svg>
+                                            <span class="text-xs font-semibold">틱톡</span>
                                         </div>
-                                        <!-- Meta -->
-                                        <div class="text-center p-2 rounded-md hover:bg-slate-100 transition-colors">
-                                            <svg class="w-10 h-10 mx-auto" fill="#0062E0" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.49-10 10s4.5 10 10 10c.53 0 1.05-.05 1.56-.14a1 1 0 00.84-1.22c-.17-.63-.37-1.33-.37-1.33s-.1-.23.04-.43c.18-.25.53-.68.53-.68s.2-.25.3-.1c.1.15.25.58.25.58s.1.28.34.34c.23.07.5.04.5.04l1.3-.02s.33-.02.44-.3c.1-.28.1-1.15.1-1.15s0-.5.28-.6c.28-.1.95-.14 1.7-.14h.3s1.17.05 1.17.95c0 .9-.28 3.33-1.27 4.32-1 1-2.25 1.3-2.25 1.3s-1.15.3-2.58.05c-1.3-.23-2.6-1-3.44-2.5-1.23-2.2-1.1-5.1.2-6.6.9-1.05 2.2-1.6 3.5-1.6.85 0 1.6.2 1.9.6.3.4.2 1.05-.1 1.6-.3.55-.95 1.15-.95 1.15s-.28.43.14.7c.4.28 1.4-1.3 1.8-2.1.3-.6.4-1.2.3-1.8-.1-.6-.4-1.2-.9-1.6-.5-.4-1.1-.6-1.8-.6z"/></svg>
-                                            <p class="text-xs font-medium mt-1">메타</p>
+                                        <div class="flex flex-col items-center space-y-2 p-2 rounded-md hover:bg-gray-200 transition-colors">
+                                            <svg class="w-10 h-10 text-[#1877F2]" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+                                            <span class="text-xs font-semibold">메타</span>
                                         </div>
                                     </div>
                                 </div>
@@ -180,36 +183,74 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-semibold text-center mb-4">분석: 압도적인 비용 효율성</h3>
+                    <p class="text-lg leading-relaxed text-gray-700 mb-8 max-w-3xl mx-auto text-center">
+                        고가의 RFID 인프라(수억 원대) 구축 없이 유사한 수준의 데이터 수집 및 GFX 제작이 가능합니다. 이는 초기 투자 비용을 극적으로 낮추고, 소규모 팀으로도 운영 가능한 유연성을 제공하여 시장 진입 장벽을 해소합니다.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="costBenefitChart"></canvas>
+                    </div>
+                </div>
             </section>
             
-            <section id="section-5" class="content-section mb-16">
-                <h2 class="text-3xl font-bold mb-4 border-b pb-2">경쟁 우위 (Edge) 및 기대효과</h2>
+            <section id="section-4" class="content-section mb-16">
+                <h2 class="text-3xl font-bold mb-4 border-b pb-2">시스템 아키텍처: AI 기반 제작 모델</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <p class="text-lg mb-8 leading-relaxed text-gray-700">'버추얼 테이블'은 지난 10년간 다른 프로덕션이 시도하지 못했던 영역에 비용 효율적인 해결책을 제시합니다. 이것은 단순한 기술 도입이 아닌, 제작 워크플로우와 콘텐츠 활용 방식의 혁신입니다.</p>
-                    <div class="grid lg:grid-cols-5 gap-8 items-start">
-                        <div class="lg:col-span-3">
-                            <h3 class="text-xl font-semibold mb-3 text-blue-600">차별화된 경쟁력</h3>
-                             <ul class="space-y-3 text-gray-600">
-                                <li class="flex items-start">
-                                    <span class="text-green-500 mr-2">⚡</span> <strong>속도와 깊이의 양립:</strong> 라이브의 속도를 유지하면서도, 다양한 테이블의 분석적인 콘텐츠를 제공.
-                                </li>
-                                <li class="flex items-start">
-                                     <span class="text-green-500 mr-2">💰</span> <strong>압도적인 비용 효율성:</strong> 고가의 RFID 시스템 구축 비용(수억 원) 없이 유사한 효과를 구현.
-                                </li>
-                                <li class="flex items-start">
-                                     <span class="text-green-500 mr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                     </span> <strong>유연한 확장성:</strong> 1개의 추가 테이블부터 시작하여, 스팟터 인력만 확보되면 수십 개 테이블로 확장이 용이.
-                                </li>
-                                 <li class="flex items-start">
-                                     <span class="text-green-500 mr-2">📈</span> <strong>콘텐츠 자산 축적:</strong> 모든 핸드 데이터가 DB에 축적되어, 향후 데이터 기반 콘텐츠 제작에 활용 가능.
-                                </li>
+                <p class="text-lg mb-8 leading-relaxed text-gray-700">
+                    '버추얼 테이블'은 고비용의 완전 자동화 대신, 인간의 판단력과 AI의 효율성을 결합한 'Human-in-the-loop' 모델을 채택합니다. 현장 스팟터(Spotter)가 핵심 데이터를 빠르고 정확하게 입력할 수 있도록 돕는 AI 기반 도구를 제공하고, 이 데이터를 기반으로 GFX를 자동으로 생성하여 제작 시간을 최소화하는 것이 핵심입니다.
+                </p>
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4 text-center">
+                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
+                        <div class="text-4xl mb-3">📱</div>
+                        <h3 class="text-lg font-semibold">1. 현장 데이터 입력</h3>
+                        <p class="text-sm text-gray-600 mt-1">스팟터가 전용 앱을 통해 카드, 액션, 칩 카운트 등 필수 정보를 버튼 클릭 방식으로 즉시 입력</p>
+                    </div>
+                    <div class="text-2xl text-gray-300">→</div>
+                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
+                        <div class="text-4xl mb-3">☁️</div>
+                        <h3 class="text-lg font-semibold">2. 데이터셋 전송</h3>
+                        <p class="text-sm text-gray-600 mt-1">입력된 데이터는 실시간으로 클라우드 데이터베이스에 핸드 단위로 구조화되어 저장</p>
+                    </div>
+                        <div class="text-2xl text-gray-300">→</div>
+                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
+                        <div class="text-4xl mb-3">✍️</div>
+                        <h3 class="text-lg font-semibold">3. 데이터 기반 GFX 제작</h3>
+                        <p class="text-sm text-gray-600 mt-1">후반 작업자는 구조화된 데이터셋을 활용하여, 템플릿 기반으로 신속하게 GFX 영상을 제작</p>
+                    </div>
+                        <div class="text-2xl text-gray-300">→</div>
+                    <div class="flex flex-col items-center p-4 rounded-lg w-full md:w-1/4 transition-transform duration-300 hover:scale-105 hover:bg-blue-50">
+                        <div class="text-4xl mb-3">📺</div>
+                        <h3 class="text-lg font-semibold">4. 최종 방송 송출</h3>
+                        <p class="text-sm text-gray-600 mt-1">완성된 GFX 클립을 메인 방송 영상에 삽입하여 풍부한 콘텐츠를 시청자에게 제공</p>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section id="section-5" class="content-section mb-16">
+                <h2 class="text-3xl font-bold mb-4 border-b pb-2">핵심 기술 및 방법</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <p class="text-lg mb-8 leading-relaxed text-gray-700">'버추얼 테이블' 시스템의 성공은 두 가지 핵심 기술 요소의 유기적인 결합에 달려 있습니다. 각 요소는 제작 과정의 특정 단계를 최적화하여 속도와 정확성을 극대화합니다.</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="border border-gray-200 p-6 rounded-lg">
+                            <h3 class="font-semibold text-xl mb-3 text-gray-800">1. 스팟터용 데이터 입력 애플리케이션</h3>
+                            <p class="text-gray-600 mb-4">현장의 스팟터(관찰 및 기록 요원)를 위한 모바일/태블릿용 웹 애플리케이션입니다. 포커 게임의 복잡한 상황을 직관적인 UI와 최소한의 터치로 입력할 수 있도록 설계됩니다.</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                <li><strong>직관적 UI/UX:</strong> 버튼 기반의 카드 및 액션 선택</li>
+                                <li><strong>입력 오류 최소화:</strong> AI 기반 추천 및 유효성 검사 기능</li>
+                                <li><strong>실시간 동기화:</strong> 입력 즉시 클라우드 DB에 데이터 전송</li>
                             </ul>
                         </div>
-                        <div class="lg:col-span-2 mt-8 lg:mt-0">
-                             <div class="chart-container">
-                                <canvas id="costBenefitChart"></canvas>
-                            </div>
+                        <div class="border border-gray-200 p-6 rounded-lg">
+                            <h3 class="font-semibold text-xl mb-3 text-gray-800">2. GFX 제작 지원 시스템</h3>
+                            <p class="text-gray-600 mb-4">클라우드의 데이터를 GFX 템플릿에 쉽게 연동하여, 작업자가 방송용 비디오 클립을 신속하게 제작할 수 있도록 지원하는 후반 작업 시스템입니다.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                <li><strong>템플릿 기반 제작:</strong> 사전 제작된 다양한 GFX 템플릿 제공</li>
+                                <li><strong>데이터 연동 효율화:</strong> DB 데이터를 GFX 템플릿에 손쉽게 적용</li>
+                                <li><strong>제작 시간 단축:</strong> 데이터 기반 작업으로 기존 수작업 대비 시간 단축</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -337,7 +378,4 @@
 
 </body>
 </html>
-
-
-
 
